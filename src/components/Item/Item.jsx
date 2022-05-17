@@ -13,6 +13,7 @@ const Item = ({character}) => {
         <p className='card-text'>Character Species : {character.species}</p>
         <p className='card-text'>Character Actual Status : {character.status}</p>
         <p className='card-text'>Character Gender : {character.gender}</p>
+        <ItemCounter initialValue={1} stock={7}/>
       </div>
     </div>
   )

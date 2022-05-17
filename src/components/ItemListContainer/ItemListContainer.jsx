@@ -34,7 +34,7 @@ const ItemListContainer = ({tittle,products}) => {
 
   }, [])*/
 
-  const [loading, setLoading] = useState(false)
+  const [Loading, setLoading] = useState(false)
   const [characters, setCharacters] = useState([])
 
   // Desafio (Posiblemente se haga de 0 todo el proyecto)
@@ -45,7 +45,7 @@ const ItemListContainer = ({tittle,products}) => {
     .then((res) => (res.json()))
     .then((data) => setCharacters(data.results))
     .catch((error) => console.log(error))
-    .finally(() => setLoading(false))
+    .finally(()=> setLoading(false))
 
   }, [])
   
@@ -53,6 +53,7 @@ const ItemListContainer = ({tittle,products}) => {
   
   return (
   <div>
+    {Loading ? <p>Loading Content...</p> : ''}
       <h1 style={{textAlign:'center', paddingTop:'2rem'}}>{tittle}</h1>
       <ItemList characters={characters}/>
       
