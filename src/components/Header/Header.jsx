@@ -1,5 +1,6 @@
 import CartWidget from "../CartWidget/CartWidget"
 import { Navbar, Container, Nav } from 'react-bootstrap'
+import {Link} from 'react-router-dom'
 
 
 
@@ -8,13 +9,13 @@ const Header = () => {
     return(
       <Navbar bg="light" expand="lg">
         <Container>
-          <Navbar.Brand href="/">RYM!</Navbar.Brand>
+        <Link to='/' className="nav-link active" aria-current="page">fENNEX</Link>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link href="/">Home</Nav.Link>
-              <Nav.Link href="/products">Shop</Nav.Link>
-              <Nav.Link href="/details">My Products</Nav.Link>
+              <Link to='/' className="nav-link active" aria-current="page">Home</Link>
+              <Link to='/products' className="nav-link active" aria-current="page">Shop</Link>
+              <Link to='/details' className="nav-link active" aria-current="page">My Products</Link>
             </Nav>
           </Navbar.Collapse>
           <CartWidget/>
@@ -25,3 +26,4 @@ const Header = () => {
 }
 
 export default Header
+

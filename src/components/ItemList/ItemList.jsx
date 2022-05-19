@@ -1,20 +1,7 @@
-import React from 'react'
-import Item from '../Item/Item'
+import Item from "../Item/Item";
 
-const ItemList = ({/*productsList*/ characters}) => {
-    // const {productsList} = props (conviene usar cuando sean mas de 5 elementos)
-    
-
-
+export default function ItemList ({items}) {
   return (
-      <>
-      <h3 style={{textAlign:'center'}}>Characters</h3>
-    <div style={{display:'flex', justifyContent:'space-between', flexWrap:'wrap', alignItems:'center'}}>
-       {/* {productsList.map((Products) => <Item Products={Products} key={Products.id}/> )} */}
-       {characters.map((character) => <Item character={character} key={character.id}/>)}
-    </div>
-      </>
-  )
+    items.map((item, index) => (<Item key={item.id} item={item} />))
+  );
 }
-
-export default ItemList
