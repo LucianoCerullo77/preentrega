@@ -1,17 +1,13 @@
-import React, {useState} from 'react'
+import React from "react"
 import { toast } from "react-toastify"
-import {Button} from "react-bootstrap"
+import { Button } from "react-bootstrap"
+export default function ItemCounter() {
+  const [count, setCount] = React.useState(1)
+  const stock = 5
 
-function ItemCounter ({initialValue, stock}) {
-//UseState se usa siempre con CONST**
-  const [amount, setAmount] = useState(initialValue)
-
-  const addUpp = () => {
-    if(amount < stock){
-      setAmount(amount + 1)
-    }
-    else {
-      toast.warn('You cannot buy more than 7 Units', {
+  React.useEffect(() => {
+    if(count !== 1) {
+      toast.info(`${count} Items Selected`, {
         position: "top-center",
         autoClose: 5000,
         hideProgressBar: false,
@@ -21,43 +17,46 @@ function ItemCounter ({initialValue, stock}) {
         progress: undefined,
         });
     }
+  },[count])
+
+  const onAdd = () => {
+    if(count < stock) {
+      setCount(count + 1)
+    }
+  }
+
+  const onDecrease = () => {
+    if(count > 1) {
+      setCount(count - 1)
+    }
   }
   
-  const substract = () => {
-    if (amount > 0) {
-    setAmount(amount - 1)
-  }
-}
+    const onSubmit = () => {
+    toast.success(`${count} Items were added to cart`, {
+      position: "top-center",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      });
+    }
+    
+  const StockButton = ({ handleOnClick, text }) => {
+    return <Button className="stock-button" onClick={() => handleOnClick()}>{text}</Button>;
+  };
 
-const addOnCart = () => {
-  toast.info(`${amount} Products added on cart`, {
-    position: "top-center",
-    autoClose: 5000,
-    hideProgressBar: false,
-    closeOnClick: true,
-    pauseOnHover: true,
-    draggable: true,
-    progress: undefined,
-    });
-}
-
-
-React.useEffect(() => {
-  console.log(`${amount} Selected items were changes in stock`);
-
-},[amount])
-
-
+  const AddButton = ({handleOnSubmit}) => {
+    return <Button className="btn add-button" onClick={() => handleOnSubmit()}>Añadir al carrito</Button>;
+  };
 
   return (
-    <div>
-        <Button variant='outline-primary' onClick={substract}>-</Button>
-        <span>{amount} Amount</span>
-        <Button variant='outline-primary' onClick={addUpp}>+</Button>
-        <br/>
-        <Button variant='success' onClick={addOnCart}>Add on Cart</Button>
+    <div className="add-button-container">
+      <StockButton text="-" handleOnClick={onDecrease}/>
+      <span className="add-button-count">{count}</span>
+      <StockButton text="+" handleOnClick={onAdd}/>
+      <AddButton handleOnSubmit={onSubmit} />
     </div>
-  )
+  );
 }
-
-export default ItemCounter

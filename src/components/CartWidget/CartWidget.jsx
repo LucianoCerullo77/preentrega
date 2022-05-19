@@ -6,7 +6,7 @@ export default function CartWidget() {
   return (
     <div className="CartWidget">
       <Link to="/cart">
-        <FontAwesomeIcon icon={faCartShopping} />
+        <FontAwesomeIcon icon={faCartShopping} style={{fontSize:'1.5rem'}} />
       </Link>
     </div>
   );

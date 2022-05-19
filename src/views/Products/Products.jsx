@@ -5,7 +5,7 @@ export default function Products() {
   return (
     <div>
       <Header />
-      <h1>Our Product List</h1>
+      <h1>Product List</h1>
       <ItemListContainer />
     </div>
   );

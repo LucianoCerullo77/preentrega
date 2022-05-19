@@ -1,30 +1,3 @@
-// import Header from "./components/Header/Header";
-// import 'bootstrap/dist/css/bootstrap.min.css';
-// import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
-// import {BrowserRouter, Routes, Route} from 'react-router-dom'
-// import Home from "./views/Home";
-// import ItemCounter from "./components/ItemCounter/ItemCounter";
-// import CartWidget from "./components/CartWidget/CartWidget";
-// import Item from "./components/Item/Item";
-// import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
-
-
-// function App() {
-//   return (
-//     <BrowserRouter>
-//         <Header/>
-//         <Routes>
-//           <Route path='/' element={<Home/>}/>
-//           <Route path="/products" element={<ItemListContainer tittle="Welcome to RYM!"/>}/>
-//           <Route path="details/:id" element={<ItemDetailContainer></ItemDetailContainer>}/>
-//           <Route path='cart' element={<CartWidget></CartWidget>}/>
-//         </Routes>
-//           </BrowserRouter>
-//   );
-// }
-
-// export default App;
-
 
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 
@@ -33,6 +6,7 @@ import Cart from "./views/Cart/Cart"
 import Products from "./views/Products/Products"
 import Category from "./views/Category/Category"
 import Product from "./views/Product/Product"
+import { ToastContainer } from "react-toastify"
 
 
 function App() {

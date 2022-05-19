@@ -3,11 +3,11 @@ import ItemListContainer from "../../components/ItemListContainer/ItemListContai
 import { useParams } from "react-router-dom";
 export default function Category() {
   const { categoryId } = useParams();
-  console.log(categoryId)
+
   return (
     <div>
       <Header />
-      <h1>Full Product List</h1>
+      <h1>Category {categoryId} List</h1>
       <ItemListContainer categoryId={categoryId} />
     </div>
   );
