@@ -6,7 +6,7 @@ import Cart from "./views/Cart/Cart"
 import Products from "./views/Products/Products"
 import Category from "./views/Category/Category"
 import Product from "./views/Product/Product"
-import { ToastContainer } from "react-toastify"
+
 
 
 function App() {

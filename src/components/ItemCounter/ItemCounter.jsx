@@ -16,12 +16,25 @@ export default function ItemCounter() {
         draggable: true,
         progress: undefined,
         });
+        
     }
+    
   },[count])
 
   const onAdd = () => {
-    if(count < stock) {
+    if(count < stock){
       setCount(count + 1)
+    }
+    else {
+      toast.warn('You cannot buy more than 5 Units', {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        });
     }
   }
 
@@ -44,11 +57,11 @@ export default function ItemCounter() {
     }
     
   const StockButton = ({ handleOnClick, text }) => {
-    return <Button className="stock-button" onClick={() => handleOnClick()}>{text}</Button>;
+    return <Button className="stock-button"  variant="outline-primary" onClick={() => handleOnClick()}>{text}</Button>;
   };
 
   const AddButton = ({handleOnSubmit}) => {
-    return <Button className="btn add-button" onClick={() => handleOnSubmit()}>Añadir al carrito</Button>;
+    return <Button className="btn add-button" variant="success" onClick={() => handleOnSubmit()}>Add to Cart</Button>;
   };
 
   return (
@@ -56,6 +69,7 @@ export default function ItemCounter() {
       <StockButton text="-" handleOnClick={onDecrease}/>
       <span className="add-button-count">{count}</span>
       <StockButton text="+" handleOnClick={onAdd}/>
+      <br />
       <AddButton handleOnSubmit={onSubmit} />
     </div>
   );

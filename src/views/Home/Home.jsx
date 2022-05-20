@@ -6,8 +6,9 @@ export default function Home () {
     <div className="App">
       <Header />
       <h1>Welcome to Fennex</h1>
-      <p>The best place to buy PC Components</p>
-      <ItemListContainer title="Nuestros productos" />
+      <h2>The best place to buy PC Components</h2>
+      <br />
+      <ItemListContainer title="What are you looking for?"/>
       <Footer />
     </div>
   );

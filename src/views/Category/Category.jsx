@@ -7,7 +7,7 @@ export default function Category() {
   return (
     <div>
       <Header />
-      <h1>Category {categoryId} List</h1>
+      <h1>Our Category´s</h1>
       <ItemListContainer categoryId={categoryId} />
     </div>
   );

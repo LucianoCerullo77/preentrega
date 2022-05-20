@@ -14,13 +14,13 @@ export default function Header () {
             <Nav className="me-auto">
                 <Link to="/" className="nav-link active" aria-current="page">Home</Link>
                 <Link to="/products" className="nav-link active" aria-current="page">Products</Link>
-                <Link to="/category/1" className="nav-link active" aria-current="page">Mouses</Link>
-                <Link to="/category/2" className="nav-link active" aria-current="page">Keyboards</Link>
-                <Link to="/category/2" className="nav-link active" aria-current="page">Headsets</Link>
+                <Link to="/category/1" className="nav-link active" aria-current="page">Keyboards</Link>
+                <Link to="/category/2" className="nav-link active" aria-current="page">Mouses</Link>
+                <Link to="/category/3" className="nav-link active" aria-current="page">MousePads</Link>
+                <Link to="/category/4" className="nav-link active" aria-current="page">PC</Link>
                 </Nav>
           </Navbar.Collapse>
           <CartWidget />
-          <span className="badge bg-danger"></span>
         </Container>
       </Navbar>
     </header>

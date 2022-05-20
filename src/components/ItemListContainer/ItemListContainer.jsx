@@ -13,7 +13,7 @@ export default function ItemListContainer ({title, categoryId}) {
     }
   },[categoryId])
   return (
-    <Container className="itemlist-container">
+    <Container className="itemlist-container" style={{justifyContent:'center', textAlign:'center'}}>
       <Row>
         <Col>
           <h1>{title}</h1>
