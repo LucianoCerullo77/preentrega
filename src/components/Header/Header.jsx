@@ -17,7 +17,8 @@ export default function Header () {
                 <Link to="/category/1" className="nav-link active" aria-current="page">Keyboards</Link>
                 <Link to="/category/2" className="nav-link active" aria-current="page">Mouses</Link>
                 <Link to="/category/3" className="nav-link active" aria-current="page">MousePads</Link>
-                <Link to="/category/4" className="nav-link active" aria-current="page">PC</Link>
+                <Link to="/category/4" className="nav-link active" aria-current="page">PC´s</Link>
+                <Link to="/login" className="nav-link active" aria-current="page">Login to Account</Link>
                 </Nav>
           </Navbar.Collapse>
           <CartWidget />
