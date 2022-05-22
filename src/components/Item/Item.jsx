@@ -12,7 +12,7 @@ export default function Item({ item }) {
             Some quick example text to build on the card title and make up the
             bulk of the card's content.
           </Card.Text>
-          <h3>$ {item.price}</h3>
+          <h3>$ {item.price} ARS</h3>
           <ItemCounter />
         </Card.Body>
       </Card>

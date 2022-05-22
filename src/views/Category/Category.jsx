@@ -1,4 +1,3 @@
-import Header from "../../components/Header/Header";
 import ItemListContainer from "../../components/ItemListContainer/ItemListContainer";
 import { useParams } from "react-router-dom";
 export default function Category() {
@@ -6,8 +5,7 @@ export default function Category() {
 
   return (
     <div>
-      <Header />
-      <h1>Our Category´s</h1>
+      <h1>Our Category List</h1>
       <ItemListContainer categoryId={categoryId} />
     </div>
   );

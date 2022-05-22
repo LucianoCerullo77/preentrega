@@ -1,17 +1,31 @@
 import ItemList from "../ItemList/ItemList";
 import {Container, Row, Col} from "react-bootstrap"
 import React from "react";
-import { products } from "../../data/products";
+import { getData } from "../../data/products";
+
+
+
+
+
 export default function ItemListContainer ({title, categoryId}) {
   const [items, setItems] = React.useState([]);
+  const [loading, setLoading] = React.useState(true)
   React.useEffect(() => {
-    if(categoryId){
-      setItems(products.filter(item => item.category_id === +categoryId));
-    }
-    else{
-      setItems(products);
-    }
+    getData
+    .then((res) => {
+      if(categoryId){
+        setItems(res.filter(item => item.category_Id === +categoryId));
+      }
+      else {
+        setItems(res);
+      }
+    })
+    .catch((error) => console.log(error))
+    .finally(() => setLoading(false))
   },[categoryId])
+
+
+
   return (
     <Container className="itemlist-container" style={{justifyContent:'center', textAlign:'center'}}>
       <Row>
@@ -19,9 +33,9 @@ export default function ItemListContainer ({title, categoryId}) {
           <h1>{title}</h1>
         </Col>
       </Row>
-      <Row>
+      <Row style={{justifyContent:'center'}}>
         
-        <ItemList items={items} />
+        { loading ? <p>Loading Content...</p>  : <ItemList items={items} /> }
       </Row>
      
     </Container>
