@@ -1,7 +1,7 @@
 export const products = [
     {
       id: 1,
-      title: "Gamer Keyboard Redragon K552 Kumara Rainbow Switch Red",
+      title: "Keyboard Redragon K552 Kumara Rainbow Switch Red",
       stock: 3,
       price: 4.819,
       image: "/images/Teclado-Gamer-Redragon-K552-Kumara-RGB-Rainbow-Red_41191_1.jpeg",
@@ -17,7 +17,7 @@ export const products = [
     },
     {
       id: 3,
-      title: "Pad Mouse Redragon P030 Flick Medium",
+      title: "MousePad Redragon P030 Flick Medium",
       stock: 10,
       price: 1.259,
       image: "/images/flick mediano.jpeg",
@@ -33,7 +33,7 @@ export const products = [
     },
     {
       id: 5,
-      title: "Gamer Keyboard Redragon K530 Draconic Rgb Wireless",
+      title: "Keyboard Redragon K530 Draconic Rgb Wireless",
       stock: 3,
       price: 7.339,
       image: "/images/redragon k530 draconic.jpeg",
@@ -65,7 +65,7 @@ export const products = [
     },
     {
       id: 9,
-      title: "Gamer Keyboard Redragon K585 Diti Rgb Switch Brown",
+      title: "Keyboard Redragon K585 Diti Rgb Switch Brown",
       stock: 3,
       price: 25000,
       image: "/images/teclado-gamer-rgb-redragon_42232_1.jpeg",
@@ -97,7 +97,7 @@ export const products = [
     },
     {
       id: 13,
-      title: "Gamer Keyboard Redragon K552W Kumara Rainbow Switch Red",
+      title: "Keyboard Redragon K552W Kumara Rainbow Switch Red",
       stock: 1,
       price: 4.849,
       image: "/images/teclado-redragon-white-rainbow_41192_5.jpeg",

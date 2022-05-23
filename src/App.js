@@ -1,6 +1,6 @@
 
 import { BrowserRouter, Routes, Route } from "react-router-dom"
-
+import { CartProvider } from "./context/CartContext"
 import Home from "./views/Home/Home"
 import Cart from "./views/Cart/Cart"
 import Products from "./views/Products/Products"
@@ -15,6 +15,7 @@ import Login from "./views/Login/Login"
 function App() {
   return (
       <BrowserRouter>
+      <CartProvider>
       <Header/>
         <Routes>
           <Route exact path="*" element={<Home />} />
@@ -25,6 +26,7 @@ function App() {
           <Route exact path="/login" element={<Login />} />
         </Routes>
         <Footer/>
+        </CartProvider>
       </BrowserRouter>
   );
 }
