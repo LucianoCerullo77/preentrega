@@ -1,5 +1,5 @@
 import React from "react"
-import {Card} from "react-bootstrap"
+import {Card, Button} from "react-bootstrap"
 import ItemCounter from "../ItemCounter/ItemCounter";
 import { CartContext } from "../../context/CartContext";
 export default function ItemDetail ({item}) {
@@ -18,7 +18,7 @@ export default function ItemDetail ({item}) {
         </Card.Text>
         <h3>$ {item.price}</h3>
         {isInCart(item.id) ? (
-          <button>Go to Cart</button>
+          <Button variant="secondary">Go to Cart</Button>
         ) : (
           <ItemCounter
             onSubmit={() => addToCart(item, count)}

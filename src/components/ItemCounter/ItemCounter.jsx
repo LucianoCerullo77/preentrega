@@ -17,12 +17,12 @@ export default function ItemCounter({count, setCount, stock, onSubmit}) {
   }
   
   const StockButton = ({ handleOnClick, text }) => {
-    return <Button className="stock-button" onClick={() => handleOnClick()}>{text}</Button>;
+    return <Button className="stock-button" variant="outline-primary" onClick={() => handleOnClick()}>{text}</Button>;
   };
 
-  
+
   const AddButton = ({handleOnSubmit}) => {
-    return <Button className="btn add-button" onClick={() => handleOnSubmit()}>Add to cart</Button>;
+    return <Button className="btn add-button" variant="success" onClick={() => handleOnSubmit()}>Add to cart</Button>;
   };
 
   return (
