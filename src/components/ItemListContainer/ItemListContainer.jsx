@@ -14,8 +14,9 @@ export default function ItemListContainer ({title, categoryId}) {
     getData
     .then((res) => {
       if(categoryId){
-        setItems(res.filter(item => item.category_Id === +categoryId));
+        setItems(res.filter(item => item.category_id === +categoryId));
       }
+
       else {
         setItems(res);
       }
@@ -23,8 +24,6 @@ export default function ItemListContainer ({title, categoryId}) {
     .catch((error) => console.log(error))
     .finally(() => setLoading(false))
   },[categoryId])
-
-
 
   return (
     <Container className="itemlist-container" style={{justifyContent:'center', textAlign:'center'}}>
