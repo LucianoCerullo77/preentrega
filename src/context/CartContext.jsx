@@ -36,6 +36,11 @@ const CartProvider = ({children}) => {
   }
 
 
+  const cartQuantity = () => {
+    return cart.reduce((acc, item) => acc += item.quantity, 0)
+  }
+
+
   return (
     <Provider value={{
       addToCart,
@@ -43,6 +48,7 @@ const CartProvider = ({children}) => {
       deleteAll,
       isInCart,
       cart,
+      cartQuantity
     }}>{children}</Provider>
   )
 }
