@@ -5,13 +5,13 @@ import { Link } from "react-router-dom";
 
 import { CartContext } from "../../context/CartContext";
 export default function CartWidget() {
-  const { cart } = React.useContext(CartContext);
+  const { cartQuantity } = React.useContext(CartContext);
   return (
     <div className="CartWidget">
       <Link to="/cart">
         <FontAwesomeIcon icon={faCartShopping} />
         <span className="badge">
-          {cart.length}
+          {cartQuantity() || ""}
         </span>
       </Link>
     </div>
